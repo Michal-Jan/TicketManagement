@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicketManagement.Application.Contracts.Persistence
 {
-    interface IAsyncRepository<T> where T : class
+    public interface IAsyncRepository<T> where T : class
     {
         Task<T> GetByIdAsync(Guid id);
         Task<IReadOnlyList<T>> ListAllAsync();
